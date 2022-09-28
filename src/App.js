@@ -12,11 +12,8 @@ import {
 } from 'react-router-dom';
 import Ending from './componets/Grammatica/Ending';
 import About from './componets/About/About';
-import Search from './componets/products/Search';
-import AddProduct from './componets/products/AddProduct';
-import ProductDisplay from './componets/products/ProductDisplay';
-import ListProducts from './componets/products/ListProducts';
-import Products from './componets/products/Products';
+
+import Singular from './componets/Grammatica/Singular';
 
 function App() {
   return (
@@ -25,12 +22,10 @@ function App() {
       <Route element={<About />} />
       <Route path="products" element={<Grammatica />}>
           <Route path="ending" element={<Ending />} />
-          <Route path="list" element={<ListProducts />} />
-          <Route path="add" element={<AddProduct />} />
-          <Route path=":id" element={<ProductDisplay />} />
       </Route>
       <Route path="grammatica" element={<Grammatica />}>
         <Route path="ending" element={<Ending />} />
+        <Route path="singular" element={<Singular />}/>
       </Route>
     </Routes>
   );
