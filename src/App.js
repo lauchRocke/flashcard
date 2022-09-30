@@ -14,6 +14,7 @@ import Ending from './componets/Grammatica/Ending';
 import About from './componets/About/About';
 
 import Singular from './componets/Grammatica/Singular';
+import Indicated from './componets/Grammatica/Indicated';
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
       </Route>
       <Route path="grammatica" element={<Grammatica />}>
         <Route path="ending" element={<Ending />} />
-        <Route path="singular" element={<Singular />}/>
+        <Route path="indicated" element={<Indicated />}/>
       </Route>
     </Routes>
   );

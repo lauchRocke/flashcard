@@ -35,7 +35,7 @@ function Singular() {
             type="button"
             className="filter-btn"
   
-            onClick={shouldAddEventHandler ? "<Case items={menuItems}/>" : ''}
+            onClick={shouldAddEventHandler ? <Case items={menuItems}/> : ''}
           >
             Case
           </button>
