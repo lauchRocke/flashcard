@@ -7,6 +7,8 @@ function Layout() {
         <h3>Layout</h3>
 
     <Link to="/grammatica">Grammatica</Link>
+    <br/>
+    <Link to="/exercitationes">Exercitationes</Link>
     </div>
   )
 }

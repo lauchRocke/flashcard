@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function TransfromSgPl() {
+function TransformSgPl() {
   return (
     <div>
     <h3><Link to="/grammatica/singular">Singular</Link></h3>
@@ -55,4 +55,4 @@ function TransfromSgPl() {
   )
 }
 
-export default TransfromSgPl
+export default TransformSgPl
