@@ -25,9 +25,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />} />
       <Route element={<About />} />
-      <Route path="products" element={<Grammatica />}>
-          <Route path="ending" element={<Ending />} />
-      </Route>
+    
       <Route path="grammatica" element={<Grammatica />}>
         <Route path="ending" element={<Ending />} />
         <Route path="indicated" element={<Indicated />}/>

@@ -1,15 +1,14 @@
 import React from 'react';
 import './Ending.css';
 import { Outlet, Link } from 'react-router-dom';
-import list from '../flashcard/data'
 
-function FlashCard({ data: { cases, ending, form } }) {
+function FlashCard({ data: { a, b } }) {
   return (
     <section className="card-container">
       <div className="card">
-        <div className="card-style card-front">{cases}</div>
+        <div className="card-style card-front">{a}</div>
 
-        <div className="card-style card-back"> Ending :{ending}, Form {form}</div>
+        <div className="card-style card-back"> {b}</div>
       </div>
     </section>
   );
@@ -20,20 +19,30 @@ function FlashCardsHolder({ list }) {
     <div style={{ display: 'flex' }}>
       ok
       {list.map((item) => (
-        <FlashCard key = {item.id} data={item} />
+        <FlashCard data={item} />
       ))}
     </div>
   );
 }
+<FlashCardsHolder
+list={[
+  { a: 1, b: 1 },
+  { a: 2, b: 2 },
+]}
+/>
 
 function Ending() {
   return (
     <div>
       <h3>
-        <Link to="/grammatica/singular">Singular</Link>
+        <Link to="/grammatica/singular">Singular2</Link>
       </h3>
+
       <FlashCardsHolder
-        list={list}
+        list={[
+          { a: 1, b: 1 },
+          { a: 2, b: 2 },
+        ]}
       />
       <table>
         <thead>
