@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Ending.css';
 import { Outlet, Link } from 'react-router-dom';
 import list from '../flashcard/data'
+import Modal from '../Modal/Modal';
 
 function FlashCard({ data: { cases, ending, form } }) {
   return (
@@ -9,7 +10,7 @@ function FlashCard({ data: { cases, ending, form } }) {
       <div className="card">
         <div className="card-style card-front">{cases}</div>
 
-        <div className="card-style card-back"> Ending :{ending}, Form {form}</div>
+        <div className="card-style card-back"> Ending:{ending}, Form: {form}</div>
       </div>
     </section>
   );
@@ -27,14 +28,27 @@ function FlashCardsHolder({ list }) {
 }
 
 function Ending() {
+  
+  
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div>
+      <button onClick={() => setIsOpen(true)}>
+      Click to Open Modal
+    </button>
+    <br />
+    <Modal handleClose={() => setIsOpen(false)} isOpen={isOpen}>
+    <FlashCardsHolder
+        list={list}
+      />
+    </Modal>
+    <br />
       <h3>
         <Link to="/grammatica/singular">Singular</Link>
       </h3>
-      <FlashCardsHolder
-        list={list}
-      />
+      <br />
+     
       <table>
         <thead>
           <tr>

@@ -235,12 +235,12 @@ p {
     height: 150px;
   }
 }
-
+/* 
 .card-container {
   margin-top: 30px;
   background-color: transparent;
-  width: 300px;
-  height: 400px;
+  width: 1000px;
+  height: 500px;
   perspective: 600px;
 }
 
@@ -283,4 +283,4 @@ p {
   background-color: #2a2a72;
   color: #ffa400;
   transform: rotateY(180deg);
-}
+} */
