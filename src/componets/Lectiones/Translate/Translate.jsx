@@ -1,8 +1,10 @@
 import React from 'react'
+import TextToSpeech from '../TextToSpeech/TextToSpeech'
 
 function Translate() {
   return (
     <div>
+      <TextToSpeech />
     <table>
     <thead>
       <tr>

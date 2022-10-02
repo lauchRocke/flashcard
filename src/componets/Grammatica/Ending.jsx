@@ -3,6 +3,7 @@ import './Ending.css';
 import { Outlet, Link } from 'react-router-dom';
 import list from '../Flashcard/data';
 import Modal from '../Modal/Modal';
+import plural from '../Flashcard/plural';
 import FlashCardsHolder from '../Flashcard/FlashCardsHolder';
 import styled from 'styled-components';
 
@@ -21,7 +22,7 @@ function Ending() {
 
   return (
     <div>
-      <Button onClick={() => setIsOpen(true)}>Click to Open Modal</Button>
+      <Button onClick={() => setIsOpen(true)}>Singular Flashcard</Button>
       <br />
       <Modal handleClose={() => setIsOpen(false)} isOpen={isOpen}>
         <FlashCardsHolder list={list} />
@@ -75,7 +76,12 @@ function Ending() {
         </tbody>
       </table>
       <h3>Plural</h3>
-
+      <Button onClick={() => setIsOpen(true)}>Plural Flashcard</Button>
+      <br />
+      <Modal handleClose={() => setIsOpen(false)} isOpen={isOpen}>
+        <FlashCardsHolder list={plural} />
+      </Modal>
+      <br />
       <table>
         <thead>
           <tr>
