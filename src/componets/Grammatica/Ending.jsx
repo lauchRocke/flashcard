@@ -1,31 +1,9 @@
 import React, { useState } from 'react';
 import './Ending.css';
 import { Outlet, Link } from 'react-router-dom';
-import list from '../flashcard/data'
+import list from '../Flashcard/data';
 import Modal from '../Modal/Modal';
-
-function FlashCard({ data: { cases, ending, form } }) {
-  return (
-    <section className="card-container">
-      <div className="card">
-        <div className="card-style card-front">{cases}</div>
-
-        <div className="card-style card-back"> Ending:{ending}, Form: {form}</div>
-      </div>
-    </section>
-  );
-}
-
-function FlashCardsHolder({ list }) {
-  return (
-    <div style={{ display: 'flex' }}>
-      ok
-      {list.map((item) => (
-        <FlashCard key = {item.id} data={item} />
-      ))}
-    </div>
-  );
-}
+import FlashCardsHolder from '../Flashcard/FlashCardsHolder';
 
 function Ending() {
   

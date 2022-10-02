@@ -9,6 +9,8 @@ function Layout() {
     <Link to="/grammatica">Grammatica</Link>
     <br/>
     <Link to="/exercitationes">Exercitationes</Link>
+    <br />
+    <Link to="/lectiones">Lectiones</Link>
     </div>
   )
 }
