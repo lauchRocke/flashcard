@@ -4,39 +4,34 @@ import { Outlet, Link } from 'react-router-dom';
 import list from '../Flashcard/data';
 import Modal from '../Modal/Modal';
 import FlashCardsHolder from '../Flashcard/FlashCardsHolder';
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 function Ending() {
   const Button = styled.button`
-  background: transparent;
-  border-radius: 3px;
-  border: 2px solid black;
-  color: black;
-  margin: 0 1em;
-  padding: 0.25em 1em;
-  cursor: pointer;
-`
-  
-  
+    background: transparent;
+    border-radius: 3px;
+    border: 2px solid black;
+    color: black;
+    margin: 0 1em;
+    padding: 0.25em 1em;
+    cursor: pointer;
+  `;
+
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div>
-      <Button onClick={() => setIsOpen(true)}>
-      Click to Open Modal
-    </Button>
-    <br />
-    <Modal handleClose={() => setIsOpen(false)} isOpen={isOpen}>
-    <FlashCardsHolder
-        list={list}
-      />
-    </Modal>
-    <br />
+      <Button onClick={() => setIsOpen(true)}>Click to Open Modal</Button>
+      <br />
+      <Modal handleClose={() => setIsOpen(false)} isOpen={isOpen}>
+        <FlashCardsHolder list={list} />
+      </Modal>
+      <br />
       <h3>
         <Link to="/grammatica/singular">Singular</Link>
       </h3>
       <br />
-     
+
       <table>
         <thead>
           <tr>
