@@ -4,17 +4,27 @@ import { Outlet, Link } from 'react-router-dom';
 import list from '../Flashcard/data';
 import Modal from '../Modal/Modal';
 import FlashCardsHolder from '../Flashcard/FlashCardsHolder';
+import styled from 'styled-components'
 
 function Ending() {
+  const Button = styled.button`
+  background: transparent;
+  border-radius: 3px;
+  border: 2px solid black;
+  color: black;
+  margin: 0 1em;
+  padding: 0.25em 1em;
+  cursor: pointer;
+`
   
   
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div>
-      <button onClick={() => setIsOpen(true)}>
+      <Button onClick={() => setIsOpen(true)}>
       Click to Open Modal
-    </button>
+    </Button>
     <br />
     <Modal handleClose={() => setIsOpen(false)} isOpen={isOpen}>
     <FlashCardsHolder
