@@ -1,4 +1,5 @@
 import React from 'react';
+import Player from './Player';
 const axios = require('axios');
 
 const options = {
@@ -60,15 +61,26 @@ function TextToSpeech() {
   return (
     <div>
       <button onClick={() => handleClick()}>TextToSpeech</button>
-      <audio id="audio" controls>
-        <source id="source" src="" type="audio/ogg" />
-      </audio>
-      {/* <figure>
+      {/* <audio id="audio" controls>
+        <source id="source" src="../audio/one/amo.mp3" type="audio/ogg" />
+      </audio> */}
+       {/* <figure>
         <figcaption>Listen to the T-Rex:</figcaption>
         <audio controls src="/media/cc0-audio/t-rex-roar.mp3">
           <a href="/media/cc0-audio/t-rex-roar.mp3">Download audio</a>
         </audio>
-      </figure> */}
+      </figure>  */}
+      <figure>
+    <figcaption>Listen to the T-Rex:</figcaption>
+    <audio
+        controls
+        src="../">
+            <a href="/media/cc0-audio/t-rex-roar.mp3">
+                Download audio
+            </a>
+    </audio>
+</figure>
+<Player />
     </div>
   );
 }
