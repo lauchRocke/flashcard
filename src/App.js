@@ -24,7 +24,7 @@ import ModalHolder from './componets/Modal/ModalHolder';
 import Modal from './componets/Modal/Modal';
 import Lectiones from './componets/Lectiones/Lectiones';
 import Translate from './componets/Lectiones/Translate/Translate';
-
+import Vocabulary from './componets/Chap3/Vocabulary/Vocabulary'
 function App() {
   return (
     <Routes>
@@ -45,6 +45,7 @@ function App() {
       <Route path="lectiones" element={<Lectiones />} >
         <Route path="translate" element={<Translate />}/>
       </Route>
+      <Route path="vocabulary" element={<Vocabulary />} />
     </Routes>
   );
 }

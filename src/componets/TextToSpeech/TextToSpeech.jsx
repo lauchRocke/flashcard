@@ -14,22 +14,22 @@ const options = {
 
 let data = '';
 
-function handleClick() {
-  console.log('click');
-  axios
-    .request(options)
-    .then(function (response) {
-      //   console.log(response);
-      //      let audioHear = URL.createObjectURL(response.data);
+// function handleClick() {
+//   console.log('click');
+//   axios
+//     .request(options)
+//     .then(function (response) {
+//       //   console.log(response);
+//       //      let audioHear = URL.createObjectURL(response.data);
 
-      data = response.data;
-      converyBinary();
-      return response.data;
-    })
-    .catch(function (error) {
-      console.error(error);
-    });
-}
+//       data = response.data;
+//       converyBinary();
+//       return response.data;
+//     })
+//     .catch(function (error) {
+//       console.error(error);
+//     });
+// }
 
 function convertDataURIToBinary(dataURI) {
   var BASE64_MARKER = ';base64,';
@@ -60,7 +60,7 @@ function converyBinary() {
 function TextToSpeech() {
   return (
     <div>
-      <button onClick={() => handleClick()}>TextToSpeech</button>
+      {/* <button onClick={() => handleClick()}>TextToSpeech</button> */}
       {/* <audio id="audio" controls>
         <source id="source" src="../audio/one/amo.mp3" type="audio/ogg" />
       </audio> */}

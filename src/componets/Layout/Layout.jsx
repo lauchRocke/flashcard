@@ -11,6 +11,8 @@ function Layout() {
     <Link to="/exercitationes">Exercitationes</Link>
     <br />
     <Link to="/lectiones">Lectiones</Link>
+    <br />
+    <Link to="/vocabulary">Vocabulary</Link>
     </div>
   )
 }
